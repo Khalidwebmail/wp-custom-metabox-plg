@@ -73,7 +73,9 @@ final class My_Metabox {
 
     public function init_plugin()
     {
-        
+        if( is_admin() ) {
+            new \My\Metabox\Page\Page_Meta_Box();
+        }
     }
 
     /**
